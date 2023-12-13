@@ -1,4 +1,12 @@
-let num1 = window.prompt("enter a number",10)
-let num2 = window.prompt('enter other number',5)
+let message = document.getElementById('message')
 
-document.write(Number(num1) + Number(num2))
+let textbox = document.getElementById('textbox')
+
+let button = document.getElementById('button')
+
+button.addEventListener('click' , function(){
+    let newmessage = document.createElement('li');
+    newmessage.innerHTML = textbox.value;
+    message.appendChild(newmessage)
+    textbox.value = ' '
+})
